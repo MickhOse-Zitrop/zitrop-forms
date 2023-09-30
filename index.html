@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Philosopher&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" media="all and (min-width: 769px)">
+	<link rel="stylesheet" href="css/style_mobile.css" media="all and (max-width: 768px) and (min-width: 320px)" />
+	<link type="image/x-icon" rel="icon" href="image/icon.jpg">
+	<script src="https://kit.fontawesome.com/1132cc6261.js" crossorigin="anonymous"></script>
+	<script defer src="js/script.js"></script>
+	<title>Вход - Zitrop Forms</title>
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader_dot"></div>
+		<div id="dot_2" class="preloader_dot"></div>
+		<div id="dot_3" class="preloader_dot"></div>
+		<div id="dot_4" class="preloader_dot"></div>
+	</div>
+	<div class="wrapper">
+		<div class="intro _container">
+			<div class="intro_img _ibg">
+				<img src="image/background.jpg" alt="Background">
+			</div>
+			<div class="intro_block">
+				<div class="block_wrap">
+					<div class="block_title">
+						Zitrop Forms
+					</div>
+					<div class="block_text">
+						На этом портале Вы можете проходить опросы администраторов, а также создавать свои!
+					</div>
+				</div>
+			</div>
+			<div class="intro_content">
+				<div class="content_wrap">
+					<div class="content_logo">Zitrop Forms</div>
+					<div class="content_title">Вход</div>
+					<div class="content_buttons">
+						<button class="content_button" onclick="form_show(this.id)" id="user_button">Я
+							пользователь</button>
+						<button class="content_button" onclick="form_show(this.id)" id="admin_button">Я
+							администратор</button>
+						<a onclick="form_show()" class="content_link">Ещё не зарегестрированы?</a>
+					</div>
+				</div>
+				<div class="form_block" id="login_block">
+					<button tabindex="-1" onclick="form_hide()" class="form_button">
+						<i class="fa-solid fa-left-long"></i>
+					</button>
+					<div class="form_title">Войти как пользователь</div>
+					<form id="form" action="" method="post">
+						<div class="form_input-group">
+							<input oninput="check_input(this, this.type)" tabindex="-1" type="email" name="email"
+								id="email" class="form_input" required autocomplete="email">
+							<label for="email" class="form_label">E-mail</label>
+						</div>
+						<div class="form_input-group">
+							<input oninput="check_input(this, this.type)" tabindex="-1" type="password" name="password"
+								id="password" class="form_input" required maxlength="50" autocomplete="off">
+							<i class="fa-regular fa-eye eye"></i>
+							<label for="password" class="form_label">Пароль</label>
+						</div>
+						<input tabindex="-1" id="submit" class="form_submit" type="submit" value="Войти">
+					</form>
+				</div>
+				<div class="form_block" id="register_block">
+					<button tabindex="-1" onclick="form_hide()" class="form_button">
+						<i class="fa-solid fa-left-long"></i>
+					</button>
+					<div class="form_title">Зарегестрироваться</div>
+					<div class="reg_block">
+						<form id="reg_form" action="" method="post">
+							<div class="form_input-group">
+								<input oninput="check_input(this, this.type)" tabindex="-1" id="reg_email" type="email"
+									name="reg_email" class="form_input" required>
+								<label for="reg_email" class="form_label">Email</label>
+							</div>
+							<div class="form_input-group">
+								<input oninput="check_input(this, this.type)" tabindex="-1" id="reg_password"
+									type="password" name="reg_password" class="form_input" required maxlength="50">
+								<i class="fa-regular fa-eye eye"></i>
+								<label for="reg_password" class="form_label">Пароль</label>
+								<p id="password_info">Не менее 6 символов, буквы
+									верхнего и нижнего
+									регистра, <br> хотя бы 1 цифру и 1 специальный символ</p>
+							</div>
+							<div class="form_input-group">
+								<input oninput="check_input(this, this.type)" tabindex="-1" id="reg_password_check"
+									type="password" name="reg_password_check" class="form_input" required
+									maxlength="50">
+								<label for="reg_password_check" class="form_label">Повторите пароль</label>
+							</div>
+							<input tabindex="-1" id="reg_submit" class="form_submit" type="submit"
+								value="Зарегестрироваться">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Philosopher&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="../css/style.css" media="all and (min-width: 769px)">
+	<link rel="stylesheet" href="../css/style_mobile.css" media="all and (max-width: 768px) and (min-width: 320px)" />
+	<link type="image/x-icon" rel="icon" href="../image/icon.jpg">
+	<script src="https://kit.fontawesome.com/1132cc6261.js" crossorigin="anonymous"></script>
+	<script defer src="../js/script.js"></script>
+	<title>Zitrop Forms - Личный кабинет</title>
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader_dot"></div>
+		<div id="dot_2" class="preloader_dot"></div>
+		<div id="dot_3" class="preloader_dot"></div>
+		<div id="dot_4" class="preloader_dot"></div>
+	</div>
+	<div class="wrapper">
+		<header class="header scrolled">
+			<div class="header_container _container">
+				<div class="header_logo showed _ifg">
+					<a href="" class=""><img id="header_logo" src="../image/logo.jpg" alt=""></a>
+				</div>
+				<div class="header_button logout">
+					<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				</div>
+				<div class="header_button show menu">
+					<i onclick="show_menu(this)" class="fa-solid fa-bars"></i>
+				</div>
+				<nav class="header_bar">
+					<ul class="header_list">
+						<li class="header_item"><a href="../main/" class="header_link">Главная</a></li>
+						<li class="header_item"><a href="../forms/" class="header_link">Опросы</a></li>
+						<li class="header_item"><a href="" class="header_link">Личный кабинет</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="main_hider"></div>
+		<main class="main">
+			<div class="main_background removed _ifg">
+				<img src="../image/logo.jpg" alt="">
+			</div>
+			<div class="main_container _container">
+				<div class="main_block">
+					<ul class="main_list">
+						<li id="main_item_1" class="main_item selected">Данные</li>
+						<li id="main_item_2" class="main_item">Администратор</li>
+						<li id="main_item_3" class="main_item">FAQ</li>
+					</ul>
+					<div class="main_wrapper">
+						<div id="main_wrap_1" class="main_wrap select">
+							<form class="main_form_restricted" action="" method="post">
+								<div class="form_group">
+									<label for="account_id">ID</label>
+									<label for="account_name">Имя</label>
+									<label for="account_surname">Фамилия</label>
+									<label for="account_age">Возраст</label>
+									<label for="account_email">Email</label>
+									<label for="account_password">Пароль</label>
+								</div>
+								<div class="form_group">
+									<input type="id" id="account_id" readonly value="123123">
+									<input type="text" id="account_name" readonly value="Иван">
+									<input type="text" id="account_surname" readonly value="Иванов">
+									<input type="number" id="account_age" readonly value="123">
+									<input type="email" id="account_email" readonly value="damn@mail.ru">
+									<input type="password" id="account_password" readonly value="123123">
+								</div>
+							</form>
+							<button onclick="show_form()" class="button_form" type="button">Изменить</button>
+						</div>
+						<div id="main_wrap_2" class="main_wrap">
+							<div style="font-weight: 700;" class="main_status_bar _admin">
+								<i class="fa-solid fa-circle-check" style="color: #2932E9;"></i>
+								Вы администратор
+							</div>
+							<div style="font-weight: 700;" class="main_status_bar _user">
+								<i class="fa-solid fa-circle-xmark"></i>
+								Вы не администратор
+							</div>
+							<p class="main_text _admin">Что может администратор:</p>
+							<p class="main_text _user">Чтобы стать администратором, заполните форму ниже.</p>
+							<div class="main_info _admin">
+								<ul style="margin-left: 25px;">
+									<li style="list-style: disc;">Создавать опросы;</li>
+									<li style="list-style: disc;">Смотреть статистику прохождения опросов;</li>
+									<li style="list-style: disc;">Создавать специальные артикулы для опросов;</li>
+									<li style="list-style: disc;">Назначать людей для прохождения опроса;</li>
+									<li style="list-style: disc;">Назначать людей для ЕСО.</li>
+								</ul>
+								Если возникли вопросы, пишите.
+								<form class="main_form_restricted" action="" method="post">
+									<div class="form_group">
+										<textarea name="" id="" cols="30" rows="10"></textarea>
+										<input style="background: #2932E9; color: #fff; font-weight: 700;" type="submit"
+											value="Отправить">
+									</div>
+								</form>
+							</div>
+							<div class="main_info _user">
+								<form class="main_form_restricted" id="admin_form_mobile" action="" method="post">
+									<div class="form_group">
+										<label for="admin_name">Имя</label>
+										<input type="text" id="admin_name">
+										<label for="admin_surname">Фамилия</label>
+										<input type="text" id="admin_surname">
+										<label for="admin_email">Email</label>
+										<input type="email" id="admin_email">
+										<label for="admin_text">Почему Вы хотите <br> стать администратором?</label>
+										<textarea id="admin_text" cols="30" rows="10"></textarea>
+									</div>
+								</form>
+								<form class="main_form_restricted" id="admin_form" action="" method="post">
+									<div class="form_group">
+										<label for="admin_name">Имя</label>
+										<label for="admin_surname">Фамилия</label>
+										<label for="admin_email">Email</label>
+										<label for="admin_text">Почему Вы хотите <br> стать администратором?</label>
+									</div>
+									<div class="form_group">
+										<input type="text" id="admin_name">
+										<input type="text" id="admin_surname">
+										<input type="email" id="admin_email">
+										<textarea id="admin_text" cols="30" rows="10"></textarea>
+									</div>
+								</form>
+								<button onclick="send_form()" class="button_form" type="button">Стать
+									администратором</button>
+							</div>
+						</div>
+					</div>
+					<div id="main_wrap_3" class="main_wrap">
+						<h2 class="main_title">Для чего нужна эта платформа?</h2>
+						<p class="main_text">Эта платформа предназначена для создания администраторами опросов,
+							пользователи в свою очередь могу проходить эти
+							опросы.</p>
+						<h2 class="main_title">Как пройти опрос?</h2>
+						<p class="main_text">Вы можете пройти опрос на главной странице или во вкладке “Опросы”. На
+							главной странице в нужном поле необходимо ввести
+							артикул опроса и нажать на кнопку «Пройти». Во вкладке “Опросы” можно либо ввести артикул,
+							либо пройти опрос, который
+							назначен администратором. Назначенный опрос будет находится в списке «Новые опросы».</p>
+						<h2 class="main_title">Что может пользователь?</h2>
+						<p class="main_text">
+							Пользователь имеет следующие возможности:
+						<ul style="margin-left: 25px;">
+							<li style="list-style: disc; font-size: 14px;">Проходить опросы (как по артикулу, так и
+								назначенные
+								администратором);</li>
+							<li style="list-style: disc; font-size: 14px;">Смотреть свои результаты прохождений;</li>
+							<li style="list-style: disc; font-size: 14px;">Подать заявку на получения статуса
+								«Администратор».</li>
+						</ul>
+						</p>
+						<h2 class="main_title">Что может администратор?</h2>
+						<p class="main_text">
+							Администратор имеет следующие возможности:
+						<ul style="margin-left: 25px;">
+							<li style="list-style: disc; font-size: 14px;">Создавать опросы;</li>
+							<li style="list-style: disc; font-size: 14px;">Смотреть статистику прохождения опросов;</li>
+							<li style="list-style: disc; font-size: 14px;">Создавать специальные артикулы для опросов;
+							</li>
+							<li style="list-style: disc; font-size: 14px;">Назначать людей для прохождения опроса;</li>
+							<li style="list-style: disc; font-size: 14px;">Назначать людей для ЕСО.</li>
+						</ul>
+						</p>
+						<h2 class="main_title">Как стать администратором?</h2>
+						<p class="main_text">Для того, чтобы стать администратором, Вам следует заполнить заявку в
+							разделе “Личный кабинет” <i class="fa-solid fa-arrow-right"></i> “Администратор”. В ней
+							нужно в обязательном порядке написать причину, по которой Вы хотите стать администратором.
+							Заявка будет рассмотрена в
+							течение 7 дней, после чего Вы получите ответ.</p>
+						<h2 class="main_title">Что такое артикул опроса и как его получить?</h2>
+						<p class="main_text">Артикул опроса – шестизначный числовой идентификатор опроса, который
+							создается автоматически системой. Администраторы
+							могут создавать специальные артикулы для своих опросов (если они не заняты). Получить
+							артикул можно лично у
+							администратора. Просмотреть артикул опроса можно в параметрах опроса.</p>
+						<h2 class="main_title">Что такое ЕСО и для чего оно нужно?</h2>
+						<p class="main_text">Единоразовое создание опроса (ЕСО) – возможность пользователя создания
+							одного опроса совместно с администратором. Чтобы
+							получить эту возможность, администратор должен выдать пользователю (по его ID) разрешение.
+							ЕСО служит для создания
+							совместных опросов (к примеру, если администратор не может сам создать опрос, то он может
+							выдать разрешение
+							пользователю, чтобы он помог ему). Просмотр результатов опроса будет доступен только
+							администратору.</p>
+						<h2 class="main_title">Как назначить людей для ЕСО?</h2>
+						<p class="main_text">Для того, чтобы назначить людей для ЕСО, нужно во время создания опроса
+							зайти во вкладку “ЕСО” <i class="fa-solid fa-arrow-right"></i> “Добавить
+							пользователя” и ввести ID пользователя. Пользователь, в свою очередь, должен принять
+							приглашение.</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="footer_container _container">
+					<div class="footer_column">
+						<div class="footer_logo">Навигация</div>
+						<nav class="footer_list">
+							<ul>
+								<li class="footer_item"><a href="../main/" class="footer_link">Главная</a></li>
+								<li class="footer_item"><a href="../forms/" class="footer_link">Опросы</a></li>
+								<li class="footer_item"><a href="" class="footer_link">Личный кабинет</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer_column">
+						<div class="footer_logo">Контакты</div>
+						<nav class="footer_list">
+							<ul>
+								<li class="footer_item"><a href="tel:+79782156190" class="footer_link">+7 (978)
+										215-61-90</a></li>
+								<li class="footer_item"><a href="tel:+79782156190" class="footer_link">+7 (996)
+										536-67-17</a></li>
+								<li class="footer_item"><a href="mailto:mickhose-zitrop@yandex.ru"
+										class="footer_link">mickhose-zitrop@yandex.ru</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer_column">
+						<div class="footer_logo">Соцсети</div>
+						<nav class="footer_list">
+							<ul>
+								<li class="footer_item"><a target="_blank" href="https://vk.com/zitrop"
+										class="footer_link">VK</a> <i class="fa-brands fa-vk"
+										style="margin: 5px; color: #0077FF;"></i></li>
+								<li class="footer_item"><a target="_blank" href="https://t.me/zitrop"
+										class="footer_link">TG</a> <i class="fa-brands fa-telegram"
+										style="margin: 5px; color: #27A7E7;"></i></li>
+								<li class="footer_item"><a target="_blank" href=" https://wa.me/+79782151690"
+										class="footer_link">WhatsApp</a> <i class="fa-brands fa-whatsapp"
+										style="margin: 5px; color: #43d854;"></i>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer_container _container">
+					<div class="footer_author">Made with ♡ by MickhOse Zitrop</div>
+				</div>
+			</div>
+		</footer>
+		<div class="hidden_form hidden">
+			<form action="" method="post">
+				<label for="hidden_form_input">Подтвердите пароль</label>
+				<input id="hidden_form_input" type="password">
+				<input style="background-color: #2932E9; color: #fff;" type="submit">
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
