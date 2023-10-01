@@ -497,6 +497,10 @@ body {
 
 /* Main */
 
+.main {
+	min-height: calc(100vh - 362px);
+}
+
 .main_background {
 	height: 250px;
 	background-color: #2932E9;
@@ -706,8 +710,6 @@ body {
 /* Footer */
 
 .footer {
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 	font-size: 14px;
 }
