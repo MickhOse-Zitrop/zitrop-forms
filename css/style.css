@@ -602,6 +602,10 @@ body {
 
 /* Main */
 
+.main {
+	min-height: calc(100vh - 211px);
+}
+
 .main_background {
 	height: 450px;
 	background-color: #2932E9;
